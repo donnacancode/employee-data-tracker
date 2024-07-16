@@ -15,6 +15,10 @@
 - Add Department: Prompts the user to enter a new department name and adds it to the database.
 - Quit: Exits the application.
 
+## Demo
+
+![GIF](./Untitled_%20Jul%2016,%202024%201_17%20PM.gif)
+
 ## Technologies Used
 
 - Node.js: A JavaScript runtime built on Chrome's V8 JavaScript engine.
@@ -28,8 +32,6 @@
 - db.js: Handles the connection to the PostgreSQL database using the pg library.
 - schema.sql: Contains the SQL commands to create the necessary database and tables.
 - seeds.sql: Contains the SQL commands to populate the database with initial data.
-
-![Screenshot](./Develop/public/assets/images/2024-06-28.png)
 
 ## Setup and Installation
 
