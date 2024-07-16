@@ -1,3 +1,9 @@
+-- Disconnect other users from the database
+SELECT pg_terminate_backend(pg_stat_activity.pid)
+FROM pg_stat_activity
+WHERE pg_stat_activity.datname = 'employees_db'
+  AND pid <> pg_backend_pid();
+
 DROP DATABASE IF EXISTS employees_db;
 CREATE DATABASE employees_db;
 

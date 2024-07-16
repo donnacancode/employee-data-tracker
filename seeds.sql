@@ -1,11 +1,16 @@
--- seeds.sql
+-- Clear the tables
+TRUNCATE TABLE employee RESTART IDENTITY CASCADE;
+TRUNCATE TABLE role RESTART IDENTITY CASCADE;
+TRUNCATE TABLE department RESTART IDENTITY CASCADE;
 
+-- Insert data into department
 INSERT INTO department (name)
 VALUES 
 ('Front of House'),  -- This will have id 1
 ('Back of House'),   -- This will have id 2
 ('Administration');  -- This will have id 3
 
+-- Insert data into role
 INSERT INTO role (title, salary, department_id)
 VALUES 
 ('General Manager', 75000, 1),   -- Front of House
@@ -17,6 +22,7 @@ VALUES
 ('HR/Admin Manager', 70000, 3),  -- Administration
 ('Social Media Coordinator', 50000, 3); -- Administration
 
+-- Insert data into employee
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
 VALUES 
 ('Greyson', 'Riley', 1, NULL),
