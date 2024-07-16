@@ -2,6 +2,7 @@
 const inquirer = require("inquirer");
 const pool = require("./db");
 
+// mainMenu prompts the user to choose an action and calls the corresponding function based on that choice
 async function mainMenu() {
   const { action } = await inquirer.prompt([
     {
